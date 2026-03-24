@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       DeGov Autotech — index.html
+       
+       HOW THIS FILE WORKS:
+       This file contains all the content/structure of the website.
+       - To change text: find it here and edit directly
+       - To change layout: edit the CSS classes in style.css
+       - For interactivity: see script.js
+       
+       LINKED FILES:
+       - style.css   → All visual design
+       - script.js   → All interactive features
+       - logo.svg    → The DeGov Autotech logo
+  ============================================================ -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ── PAGE TITLE (shown in browser tab) ── -->
+  <title>DeGov Autotech | CNG Financing — Drive Green, Pay Smart</title>
+
+  <!-- ── META DESCRIPTION (for Google search results) ── -->
+  <meta name="description" content="DeGov Autotech provides flexible CNG vehicle conversion financing across Nigeria. Convert now, pay later. Save up to 80% on fuel costs."/>
+
+  <!-- ── STYLESHEET ── -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ── GOOGLE FONTS ──
+       Playfair Display = elegant serif headline font
+       Plus Jakarta Sans = clean, modern body font
+       To change fonts: replace these links and update --font-head / --font-body in style.css
+  ── -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ============================================================
+       ANNOUNCEMENT BAR
+       A slim banner at the very top of the page.
+       To hide it: delete this whole <div class="announcement-bar"> block
+       To change the text: edit the <p> below
+  ============================================================ -->
+  <div class="announcement-bar" id="announcementBar">
+    <p>🎉 New: NASENI-Approved Conversion Centers now available in Abuja, Lagos & Kano. 
+      <a href="#contact">Apply Today →</a>
+    </p>
+    <button class="announcement-close" onclick="closeAnnouncement()" aria-label="Close">✕</button>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       Fixed at the top. Scrolls with the user.
+       Logo links back to top. Nav links go to sections by ID.
+       To add a new nav link: copy one <a> tag and change the href and text.
+  ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo — uses the SVG file. To change logo size, edit .logo-img in style.css -->
+      <a href="#home" class="logo-link">
+        <img src="logo.svg" alt="DeGov Autotech Logo" class="logo-img"/>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#plans" class="nav-link">Financial Plans</a>
+        <a href="#process" class="nav-link">How It Works</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right side of navbar: phone number + CTA button + hamburger -->
+      <div class="nav-actions">
+        <a href="tel:+2348039155290" class="nav-phone">📞 0803 915 5290</a>
+        <a href="#plans" class="btn-nav-cta">Apply Now</a>
+        <!-- Hamburger icon — only visible on mobile. Toggled by script.js -->
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO SECTION
+       The very first thing visitors see. Full-screen impact.
+       To change headline: edit the <h1> text
+       To change subtext: edit the <p class="hero-sub"> text
+       To change button labels/links: edit the <a> tags in .hero-btns
+  ============================================================ -->
+  <section class="hero" id="home">
+
+    <!-- Animated background particles (visual detail, pure CSS) -->
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-inner container">
+
+      <!-- Left: text content -->
+      <div class="hero-content" data-animate="fadeUp">
+        <!-- Tag label above headline -->
+        <span class="hero-eyebrow">Nigeria's #1 CNG Finance Company</span>
+
+        <!-- Main headline — break point with <br> for styling -->
+        <h1 class="hero-title">
+          CNG Conversion.<br/>
+          <em>Flexible Financing.</em><br/>
+          Zero Hassle.
+        </h1>
+
+        <!-- Supporting paragraph -->
+        <p class="hero-sub">
+          DeGov Autotech makes switching to Compressed Natural Gas simple and affordable. 
+          Convert your vehicle now, pay over time — and save up to <strong>80%</strong> on fuel costs.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero-btns">
+          <a href="#plans" class="btn-primary">Get Started — Apply Now</a>
+          <a href="#about" class="btn-ghost">Learn How It Works ↓</a>
+        </div>
+
+        <!-- Trust badges row -->
+        <div class="hero-trust">
+          <span>✅ NASENI Approved</span>
+          <span>✅ No Hidden Fees</span>
+          <span>✅ Fast Approval</span>
+        </div>
+      </div>
+
+      <!-- Right: stats card -->
+      <div class="hero-right" data-animate="fadeUp" data-delay="200">
+        <div class="hero-stats-card">
+          <p class="stats-card-label">Our Impact at a Glance</p>
+          <div class="stats-grid">
+            <!-- To change numbers/labels: edit <span> and <p> inside each .stat -->
+            <div class="stat">
+              <span class="stat-num">500+</span>
+              <p class="stat-label">Vehicles Converted</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num">80%</span>
+              <p class="stat-label">Average Fuel Savings</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num">15+</span>
+              <p class="stat-label">Certified Centers</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num">6</span>
+              <p class="stat-label">Payment Plan Options</p>
+            </div>
+          </div>
+          <!-- Mini CTA inside card -->
+          <a href="#contact" class="stats-cta">Talk to an Expert →</a>
+        </div>
+
+        <!-- Floating badge — overlaps the card for visual interest -->
+        <div class="hero-float-badge">
+          <span class="badge-num">30%</span>
+          <span class="badge-text">Upfront only<br/>Pay rest in 6 months</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PARTNERS / TRUST STRIP
+       Logos or names of partner organizations.
+       To add a partner: copy a <div class="partner-item"> and edit it.
+       To remove a partner: delete its <div class="partner-item"> block.
+  ============================================================ -->
+  <section class="partners">
+    <div class="container">
+      <p class="partners-label">Trusted Partners & Affiliations</p>
+      <div class="partners-track">
+        <!-- Each partner item: change the text to match the partner name -->
+        <div class="partner-item"><span>NIPCO Gas</span></div>
+        <div class="partner-item"><span>NITT</span></div>
+        <div class="partner-item"><span>CreditDirect</span></div>
+        <div class="partner-item"><span>Reeksoft</span></div>
+        <div class="partner-item"><span>Sterling Bank</span></div>
+        <div class="partner-item"><span>NASENI</span></div>
+        <div class="partner-item"><span>Pi-CNG</span></div>
+        <!-- Duplicate for seamless scroll animation -->
+        <div class="partner-item"><span>NIPCO Gas</span></div>
+        <div class="partner-item"><span>NITT</span></div>
+        <div class="partner-item"><span>CreditDirect</span></div>
+        <div class="partner-item"><span>Reeksoft</span></div>
+        <div class="partner-item"><span>Sterling Bank</span></div>
+        <div class="partner-item"><span>NASENI</span></div>
+        <div class="partner-item"><span>Pi-CNG</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT / WHY CNG SECTION
+       Explains the core value proposition.
+       To change the benefit cards: edit each .benefit-card block below.
+  ============================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">About DeGov Autotech</span>
+        <h2>Nigeria's Cleanest Fuel Alternative — Now Affordable for Everyone</h2>
+        <p class="section-sub">
+          Founded to bridge the gap between Nigeria's abundant natural gas and everyday vehicle owners, 
+          DeGov Autotech combines expert CNG conversion with flexible financing — so you never have 
+          to choose between going green and managing your budget.
+        </p>
+      </div>
+
+      <!-- Benefits grid: 4 cards in a row -->
+      <div class="benefits-grid">
+
+        <!-- BENEFIT CARD — To edit: change the emoji, h3, and p text -->
+        <div class="benefit-card" data-animate="fadeUp">
+          <div class="benefit-icon">💰</div>
+          <h3>Save Up to 80% on Fuel</h3>
+          <p>CNG costs significantly less than petrol or diesel per kilometre. High-mileage drivers save the most — recoup conversion costs within months.</p>
+        </div>
+
+        <div class="benefit-card" data-animate="fadeUp" data-delay="100">
+          <div class="benefit-icon">🌿</div>
+          <h3>Cut Emissions by 50%+</h3>
+          <p>CNG burns cleaner than petrol — fewer carbon monoxide, nitrogen oxide, and particulate emissions. Drive with a lighter environmental footprint.</p>
+        </div>
+
+        <div class="benefit-card" data-animate="fadeUp" data-delay="200">
+          <div class="benefit-icon">⚙️</div>
+          <h3>Extend Engine Lifespan</h3>
+          <p>Cleaner combustion means less carbon buildup, lower engine wear, and reduced maintenance costs. Your engine works harder for longer.</p>
+        </div>
+
+        <div class="benefit-card" data-animate="fadeUp" data-delay="300">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Proven Safety Standards</h3>
+          <p>All our conversions meet Nigeria Fire Regulation and EU Safety Standards. CNG tanks are pressure-tested and installed by NASENI-certified technicians.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES SECTION
+       Three main service offerings from DeGov Autotech.
+       To add/remove a service: copy or delete a .service-card block.
+  ============================================================ -->
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-header centered">
+        <span class="section-tag">What We Offer</span>
+        <h2>End-to-End CNG Solutions</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- SERVICE 1 -->
+        <div class="service-card" data-animate="fadeUp">
+          <div class="service-num">01</div>
+          <div class="service-icon">🔧</div>
+          <h3>Vehicle Conversion</h3>
+          <p>Professional CNG kit installation for cars, buses, and commercial trucks at any of our 15+ certified partner centers across Nigeria. 1–2 day turnaround.</p>
+          <ul class="service-list">
+            <!-- To add/remove features: copy or delete <li> tags -->
+            <li>Eligibility check & pre-inspection</li>
+            <li>Certified NASENI technicians</li>
+            <li>Bi-fuel (CNG + Petrol) capability</li>
+            <li>Post-conversion warranty</li>
+          </ul>
+          <a href="#contact" class="service-link">Book Conversion →</a>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="service-card featured-service" data-animate="fadeUp" data-delay="150">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-num">02</div>
+          <div class="service-icon">💳</div>
+          <h3>CNG Financing Plans</h3>
+          <p>Our Buy Now, Pay Later model removes the financial barrier. Pay just 30% upfront and spread the rest across flexible weekly or monthly installments.</p>
+          <ul class="service-list">
+            <li>30% deposit, 70% over 6 months</li>
+            <li>Weekly or monthly payment options</li>
+            <li>Competitive interest rates</li>
+            <li>No collateral for approved applicants</li>
+          </ul>
+          <a href="#plans" class="service-link">View Plans →</a>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="service-card" data-animate="fadeUp" data-delay="300">
+          <div class="service-num">03</div>
+          <div class="service-icon">⛽</div>
+          <h3>CNG Refuelling Access</h3>
+          <p>We connect you to a growing network of CNG refuelling stations across Nigeria — from urban centers to major expressways — so you're never left stranded.</p>
+          <ul class="service-list">
+            <li>Station locator assistance</li>
+            <li>Virtual Pipeline access partners</li>
+            <li>Campus & estate solutions</li>
+            <li>24/7 supply network</li>
+          </ul>
+          <a href="#contact" class="service-link">Find a Station →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FINANCIAL PLANS SECTION
+       Displays the payment tiers clearly.
+       To change a plan: edit the .plan-card content below.
+       To add a plan: copy an entire .plan-card block.
+  ============================================================ -->
+  <section class="plans" id="plans">
+    <div class="container">
+
+      <div class="section-header centered">
+        <span class="section-tag">Financial Plans</span>
+        <h2>Flexible Payment Plans Built for Every Nigerian</h2>
+        <p class="section-sub">All plans include full CNG conversion, post-install support, and access to our refuelling network.</p>
+      </div>
+
+      <div class="plans-grid">
+
+        <!-- PLAN 1: Basic -->
+        <div class="plan-card" data-animate="fadeUp">
+          <div class="plan-name">Basic Plan</div>
+          <div class="plan-deposit"><span>30%</span> upfront</div>
+          <p class="plan-desc">Perfect for private car owners converting a single vehicle.</p>
+          <ul class="plan-features">
+            <li>✅ Standard CNG kit installation</li>
+            <li>✅ 6-month repayment window</li>
+            <li>✅ Monthly installments</li>
+            <li>✅ Post-install inspection</li>
+            <li>❌ Fleet discount</li>
+          </ul>
+          <a href="#contact" class="btn-plan">Apply for Basic</a>
+        </div>
+
+        <!-- PLAN 2: Standard (highlighted) -->
+        <div class="plan-card plan-featured" data-animate="fadeUp" data-delay="150">
+          <div class="plan-popular-badge">Best Value</div>
+          <div class="plan-name">Standard Plan</div>
+          <div class="plan-deposit"><span>25%</span> upfront</div>
+          <p class="plan-desc">Ideal for ride-hailing drivers (Uber, Bolt, InDrive) and daily commuters.</p>
+          <ul class="plan-features">
+            <li>✅ Premium CNG kit installation</li>
+            <li>✅ 6-month repayment window</li>
+            <li>✅ Weekly or monthly payments</li>
+            <li>✅ Priority inspection slot</li>
+            <li>✅ 3-month maintenance check</li>
+          </ul>
+          <a href="#contact" class="btn-plan-featured">Apply for Standard</a>
+        </div>
+
+        <!-- PLAN 3: Commercial -->
+        <div class="plan-card" data-animate="fadeUp" data-delay="300">
+          <div class="plan-name">Commercial Plan</div>
+          <div class="plan-deposit"><span>20%</span> upfront</div>
+          <p class="plan-desc">Designed for fleet operators, logistics companies, and transport unions.</p>
+          <ul class="plan-features">
+            <li>✅ Bulk conversion (5+ vehicles)</li>
+            <li>✅ Extended 9-month repayment</li>
+            <li>✅ Dedicated account manager</li>
+            <li>✅ Fleet maintenance partnership</li>
+            <li>✅ Volume discount pricing</li>
+          </ul>
+          <a href="#contact" class="btn-plan">Apply for Commercial</a>
+        </div>
+
+      </div>
+
+      <!-- Disclaimer text below plans -->
+      <p class="plans-note">
+        * All plans subject to eligibility check and approval. Terms and conditions apply. 
+        Contact us to discuss bespoke arrangements for large fleets.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       HOW IT WORKS / PROCESS SECTION
+       Step-by-step visual guide.
+       To change steps: edit each .step block below.
+       To add a step: copy a .step block and increase the .step-num.
+  ============================================================ -->
+  <section class="process" id="process">
+    <div class="container">
+
+      <div class="section-header centered">
+        <span class="section-tag">How It Works</span>
+        <h2>From Application to Conversion in 4 Simple Steps</h2>
+      </div>
+
+      <div class="steps-row">
+
+        <!-- STEP 1 -->
+        <div class="step" data-animate="fadeUp">
+          <div class="step-num">01</div>
+          <div class="step-icon">📋</div>
+          <h4>Apply Online</h4>
+          <p>Fill out our simple online form with your vehicle details and preferred payment plan. Takes under 5 minutes.</p>
+        </div>
+
+        <!-- Arrow connector (hidden on mobile via CSS) -->
+        <div class="step-arrow">→</div>
+
+        <!-- STEP 2 -->
+        <div class="step" data-animate="fadeUp" data-delay="100">
+          <div class="step-num">02</div>
+          <div class="step-icon">✅</div>
+          <h4>Get Approved</h4>
+          <p>Our team reviews your application and contacts you within 24–48 hours with a decision and payment schedule.</p>
+        </div>
+
+        <div class="step-arrow">→</div>
+
+        <!-- STEP 3 -->
+        <div class="step" data-animate="fadeUp" data-delay="200">
+          <div class="step-num">03</div>
+          <div class="step-icon">🔧</div>
+          <h4>Convert Your Vehicle</h4>
+          <p>Visit one of our 15+ certified partner centers. Conversion takes 1–2 days by NASENI-certified technicians.</p>
+        </div>
+
+        <div class="step-arrow">→</div>
+
+        <!-- STEP 4 -->
+        <div class="step" data-animate="fadeUp" data-delay="300">
+          <div class="step-num">04</div>
+          <div class="step-icon">🚗</div>
+          <h4>Drive & Save</h4>
+          <p>Hit the road on cleaner, cheaper CNG. Track your savings and repay your plan on your schedule.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CNG INFO / FEATURED SOLUTIONS
+       Two feature cards highlighting core products.
+       (Inspired by Go-CNG's solutions layout + Shema Energy's service detail)
+  ============================================================ -->
+  <section class="cng-info">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag">Featured Solutions</span>
+        <h2>What Is CNG & Why Does It Matter?</h2>
+        <p class="section-sub">
+          Compressed Natural Gas is Nigeria's most underutilised asset — abundant, domestic, and 
+          dramatically cheaper than imported petrol. DeGov Autotech exists to put this fuel in reach of every Nigerian driver.
+        </p>
+      </div>
+
+      <div class="cng-features-row">
+
+        <!-- FEATURE BLOCK LEFT -->
+        <div class="cng-feature-block dark-block" data-animate="fadeUp">
+          <span class="block-tag">For Vehicle Owners</span>
+          <h3>CNG Vehicle Conversion</h3>
+          <p>Our bi-fuel conversion means your vehicle runs on both CNG and petrol — giving you the freedom of CNG savings without range anxiety. Our kit fits most petrol-engine cars, buses, and commercial trucks.</p>
+          <div class="cng-mini-stats">
+            <div><strong>40–80%</strong><span>fuel cost reduction</span></div>
+            <div><strong>1–2 days</strong><span>conversion time</span></div>
+            <div><strong>50%+</strong><span>emissions reduction</span></div>
+          </div>
+          <a href="#contact" class="btn-primary">Book a Conversion</a>
+        </div>
+
+        <!-- FEATURE BLOCK RIGHT -->
+        <div class="cng-feature-block light-block" data-animate="fadeUp" data-delay="150">
+          <span class="block-tag">For Fleet Operators</span>
+          <h3>Fleet & Commercial Financing</h3>
+          <p>Running a logistics company, transport union, or ride-hailing fleet? Our Commercial Plan allows bulk conversion at a reduced per-vehicle cost, with a single consolidated repayment plan for your entire fleet.</p>
+          <div class="cng-mini-stats">
+            <div><strong>5+</strong><span>vehicles minimum</span></div>
+            <div><strong>9 months</strong><span>repayment window</span></div>
+            <div><strong>20%</strong><span>deposit only</span></div>
+          </div>
+          <a href="#contact" class="btn-outline-dark">Talk to Sales Team</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FAQ SECTION
+       Accordion-style. Clicking a question expands the answer.
+       To add a question: copy a .faq-item block and edit the text.
+       To remove a question: delete its .faq-item block.
+       (toggle logic is in script.js — toggleFaq function)
+  ============================================================ -->
+  <section class="faq">
+    <div class="container faq-layout">
+
+      <!-- Left: sticky header -->
+      <div class="faq-header" data-animate="fadeUp">
+        <span class="section-tag">FAQ</span>
+        <h2>Common Questions About CNG & Our Plans</h2>
+        <p>Still unsure? <a href="#contact" class="inline-link">Contact our team</a> — we're happy to help.</p>
+      </div>
+
+      <!-- Right: accordion questions -->
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is CNG safe for my vehicle? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            CNG is one of the world's safest vehicle fuels. Tanks are pressure-tested to withstand extreme conditions. Unlike petrol, CNG disperses rapidly into the air if there's a leak — it doesn't pool and ignite. All our installations follow Nigeria Fire Regulation and EU Standards.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can my vehicle be converted to CNG? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Most petrol-engine vehicles can be converted — including cars, Danfo buses, Keke NAPEP tricycles, and commercial trucks. Your vehicle will first undergo a free eligibility inspection at one of our certified partner centers.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much can I really save on fuel? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Based on current Nigerian fuel pricing, CNG costs approximately 40–63% less per kilometre compared to PMS (petrol). For a high-mileage driver covering 200km/day, the savings can exceed ₦150,000 per month, meaning most customers recover conversion costs within 2–4 months.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if I run out of CNG on the road? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            All our converted vehicles are bi-fuel — meaning your vehicle can seamlessly switch between CNG and petrol at the press of a button. You're never stranded, and you always have petrol as a backup while Nigeria's CNG station network continues to expand rapidly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How does the Buy Now, Pay Later plan work? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Simple: pay a deposit (20–30% depending on your plan), drive your converted vehicle immediately, and repay the remaining balance in weekly or monthly installments over 6–9 months. No collateral required for approved applicants. We work with CreditDirect and Sterling Bank for financing.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does conversion take? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Standard conversion takes 1 to 2 working days at our certified partner centers. After conversion, your vehicle undergoes a final safety check and you receive a conversion certificate before driving out.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Are CNG refuelling stations widely available in Nigeria? <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes, and growing fast. The Presidential Initiative on CNG (Pi-CNG) is rapidly expanding refuelling infrastructure across all states. Major urban centers and key expressways (Lagos–Ibadan, Abuja–Kaduna corridors) already have multiple CNG stations. We provide a station locator tool to all our customers.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS SECTION
+       Customer reviews displayed in a grid.
+       To add a review: copy a .tcard block and edit name, initials, and quote.
+       To remove a review: delete its .tcard block.
+  ============================================================ -->
+  <section class="testimonials">
+    <div class="container">
+
+      <div class="section-header centered">
+        <span class="section-tag">Customer Stories</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+
+      <div class="tgrid">
+
+        <!-- TESTIMONIAL CARD — edit: initials, name, role, quote -->
+        <div class="tcard" data-animate="fadeUp">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"CNG has completely changed my driving costs. I used to spend ₦80,000 on fuel monthly — now it's under ₦18,000. The Buy Now, Pay Later plan made it a no-brainer."</p>
+          <div class="tcard-author">
+            <div class="tcard-avatar">K</div>
+            <div><strong>Kemi L.</strong><span>Uber Driver, Lagos</span></div>
+          </div>
+        </div>
+
+        <div class="tcard tcard-dark" data-animate="fadeUp" data-delay="100">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"The process was seamless from start to finish. I applied on a Monday, got approved Tuesday, and my bus was converted by Wednesday. Incredible service from the DeGov team."</p>
+          <div class="tcard-author">
+            <div class="tcard-avatar">O</div>
+            <div><strong>Obinna U.</strong><span>Transport Business Owner, Enugu</span></div>
+          </div>
+        </div>
+
+        <div class="tcard" data-animate="fadeUp" data-delay="200">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"I was worried about fuel scarcity affecting my logistics company. Since switching our fleet to CNG, we've had zero disruptions and our fuel bill dropped by over 60%."</p>
+          <div class="tcard-author">
+            <div class="tcard-avatar">A</div>
+            <div><strong>Adewale O.</strong><span>Fleet Manager, Abuja</span></div>
+          </div>
+        </div>
+
+        <div class="tcard" data-animate="fadeUp" data-delay="300">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"Safety was my biggest concern but the technicians explained everything clearly. The CNG tank is actually stronger than I imagined. I haven't looked back since."</p>
+          <div class="tcard-author">
+            <div class="tcard-avatar">F</div>
+            <div><strong>Fatima Y.</strong><span>Private Car Owner, Kano</span></div>
+          </div>
+        </div>
+
+        <div class="tcard" data-animate="fadeUp" data-delay="100">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"The flexible payment plan fit perfectly into my monthly budget. I'm a Bolt driver and the fuel savings alone cover my installment payments with money to spare."</p>
+          <div class="tcard-author">
+            <div class="tcard-avatar">C</div>
+            <div><strong>Chinedu E.</strong><span>Bolt Driver, Port Harcourt</span></div>
+          </div>
+        </div>
+
+        <div class="tcard" data-animate="fadeUp" data-delay="200">
+          <div class="tcard-stars">★★★★★</div>
+          <p>"I converted 8 vehicles through the Commercial Plan. The dedicated account manager made everything smooth and the bulk discount was very fair. Highly recommend DeGov."</p>
+          <div class="tcard-author">
+            <div class="tcard-avatar">N</div>
+            <div><strong>Ngozi M.</strong><span>Transport Union Manager, Ibadan</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BLOG SECTION
+       Latest news articles.
+       To add an article: copy a .blog-card block and edit the content.
+       To remove an article: delete its .blog-card block.
+  ============================================================ -->
+  <section class="blog" id="blog">
+    <div class="container">
+
+      <div class="blog-header-row">
+        <div>
+          <span class="section-tag">Our Blog</span>
+          <h2>CNG News & Insights</h2>
+        </div>
+        <a href="#" class="btn-outline-sm">View All Articles →</a>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- BLOG CARD — To edit: change category, title, date, excerpt -->
+        <div class="blog-card" data-animate="fadeUp">
+          <!-- Image placeholder: replace with <img src="your-image.jpg"> -->
+          <div class="blog-thumb blog-thumb-1"></div>
+          <div class="blog-body">
+            <span class="blog-cat">Industry News</span>
+            <h3>Commercial Drivers Urge FG to Accelerate CNG Station Rollout Nationwide</h3>
+            <p>Transport workers across Nigeria are calling for faster expansion of the CNG refuelling infrastructure, as demand for converted vehicles surges following fuel subsidy removal.</p>
+            <div class="blog-meta">
+              <span>Oct 21, 2024</span>
+              <a href="#">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-card" data-animate="fadeUp" data-delay="150">
+          <div class="blog-thumb blog-thumb-2"></div>
+          <div class="blog-body">
+            <span class="blog-cat">Technical Guide</span>
+            <h3>A Complete Guide to CNG Cylinder Manufacturing Standards in Nigeria</h3>
+            <p>As local production of CNG components increases, here's what you need to know about the safety certifications and international standards that govern CNG tank manufacturing.</p>
+            <div class="blog-meta">
+              <span>Oct 21, 2024</span>
+              <a href="#">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-card" data-animate="fadeUp" data-delay="300">
+          <div class="blog-thumb blog-thumb-3"></div>
+          <div class="blog-body">
+            <span class="blog-cat">Government Policy</span>
+            <h3>NASENI Partners With Ride-Hailing Platforms to Offer 50% CNG Conversion Discount</h3>
+            <p>The National Agency for Science and Engineering Infrastructure announces a major subsidy initiative for Uber, Bolt, and InDrive drivers looking to convert their vehicles to CNG.</p>
+            <div class="blog-meta">
+              <span>Aug 23, 2024</span>
+              <a href="#">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION
+       Contact info on the left, form on the right.
+       To change contact details: edit the .contact-detail items.
+       Form submission is handled in script.js — handleSubmit()
+  ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="container contact-layout">
+
+      <!-- Left: Contact Details -->
+      <div class="contact-info" data-animate="fadeUp">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Ready to Convert? Let's Talk.</h2>
+        <p>Our team is available Monday–Saturday, 8am–6pm. We'll respond to online enquiries within 24 hours.</p>
+
+        <!-- Contact detail items — To change: edit icon, label, and value -->
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="c-icon">📞</span>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <p><a href="tel:+2348039155290">+234 803 915 5290</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="c-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:: egbewumidegovtech@gmail.com"> egbewumidegovtech@gmail.com </a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="c-icon">📍</span>
+            <div>
+              <strong>Head Office: (HQ)</strong>
+              <p>Flat 1, Building 2, Aluko Estate, Beside MRS Filling Station, Iwo Road, Ibadan</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="c-icon">📍</span>
+            <div>
+              <strong>Workshop Address: </strong>
+              <p>Premoda Filling Station,Beside Kemsan Acres Ltd, Monatan, Ibadan </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social media links — To add: copy an <a> and change the href -->
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter/X">𝕏</a>
+          <a href="#" class="social-link" aria-label="Instagram">▣</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-wrap" data-animate="fadeUp" data-delay="150">
+        <!-- onsubmit calls handleSubmit() in script.js -->
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <h3>Send Us a Message</h3>
+
+          <!-- Two-column row for name + phone -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" placeholder="e.g. Amaka Okafor" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="e.g. 080X XXX XXXX" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" />
+          </div>
+
+          <!-- Dropdown — To change options: edit the <option> tags -->
+          <div class="form-group">
+            <label for="service">I'm Interested In</label>
+            <select id="service">
+              <option value="">-- Select a service --</option>
+              <option value="basic">Basic Plan (Personal Vehicle)</option>
+              <option value="standard">Standard Plan (Ride-Hailing Driver)</option>
+              <option value="commercial">Commercial Plan (Fleet)</option>
+              <option value="info">Just want more information</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us about your vehicle and what you need..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full">Send Message 🚀</button>
+
+          <!-- Success message — shown by script.js after form submit -->
+          <p class="form-success" id="formSuccess">
+            ✅ Message received! Our team will be in touch within 24 hours.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       Bottom of the page. Contains links, contact info, copyright.
+       To change copyright year: edit the <span id="year"> text (auto-updated by JS)
+       To add a footer link: copy an <a> tag inside the relevant column.
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <img src="logo.svg" alt="DeGov Autotech" class="footer-logo"/>
+        <p>Making Compressed Natural Gas accessible and affordable for every Nigerian — one vehicle at a time.</p>
+        <div class="footer-certifications">
+          <span>🏅 NASENI Certified</span>
+          <span>🛡️ EU Safety Standards</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Financial Plans</a>
+        <a href="#process">How It Works</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <a href="#services">Vehicle Conversion</a>
+        <a href="#plans">CNG Financing</a>
+        <a href="#services">Fleet Solutions</a>
+        <a href="#services">Refuelling Access</a>
+        <a href="#contact">Free Eligibility Check</a>
+      </div>
+
+      <!-- Column 4: Recent News -->
+      <div class="footer-col">
+        <h4>Recent News</h4>
+        <a href="#">Drivers Urge FG on CNG Infrastructure</a>
+        <a href="#">CNG Cylinder Safety Standards Guide</a>
+        <a href="#">NASENI 50% Conversion Discount</a>
+        <a href="#">FG Moves to Lower E-Hailing Fares</a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar: copyright + legal links -->
+    <div class="footer-bottom">
+      <p>Copyright © <span id="year"></span> DeGov Autotech Limited. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+       Appears when user scrolls down. Clicking it scrolls back to the top.
+       Controlled in script.js
+  ============================================================ -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+
+
+  <!-- ── JAVASCRIPT (load last for performance) ── -->
+  <script src="script.js"></script>
+
+</body>
+</html>

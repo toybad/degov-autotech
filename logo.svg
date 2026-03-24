@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" fill="none">
+  <!-- =============================================
+       DeGov Autotech — Logo SVG
+       To resize: change width/height attributes
+       To recolor: update the fill/stop-color values
+       Primary green: #0e7a45  |  Dark: #0a1f13
+  ============================================= -->
+
+  <!-- Hexagon icon mark (represents the CNG molecule / engineering precision) -->
+  <g transform="translate(0, 4)">
+    <!-- Outer hex -->
+    <polygon points="26,2 46,13 46,37 26,48 6,37 6,13"
+             fill="url(#hexGrad)" />
+    <!-- Inner hex lighter -->
+    <polygon points="26,10 39,17.5 39,32.5 26,40 13,32.5 13,17.5"
+             fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+    <!-- CNG letter inside hex -->
+    <text x="26" y="30" text-anchor="middle"
+          font-family="'Georgia', serif" font-size="13" font-weight="700"
+          fill="#ffffff" letter-spacing="0.5">CNG</text>
+  </g>
+
+  <!-- Brand name -->
+  <!-- "De" -->
+  <text x="58" y="40"
+        font-family="'Georgia', 'Times New Roman', serif"
+        font-size="30" font-weight="700" fill="#0a1f13" letter-spacing="-0.5">De</text>
+  <!-- "Gov" in green -->
+  <text x="92" y="40"
+        font-family="'Georgia', 'Times New Roman', serif"
+        font-size="30" font-weight="700" fill="#0e7a45" letter-spacing="-0.5">Gov</text>
+  <!-- Tagline "Autotech" smaller, under brand -->
+  <text x="59" y="54"
+        font-family="'Arial', sans-serif"
+        font-size="10" font-weight="600" fill="#5a7a65"
+        letter-spacing="3">AUTOTECH</text>
+  <!-- Divider line between name and tagline area -->
+  <line x1="59" y1="44" x2="175" y2="44" stroke="#0e7a45" stroke-width="1" opacity="0.3"/>
+
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a85e"/>
+      <stop offset="100%" stop-color="#0a5c30"/>
+    </linearGradient>
+  </defs>
+</svg>
